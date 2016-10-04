@@ -6,6 +6,9 @@
   "dependencies": {
     "simplisafe": "^1.0.0"
   },
+  "engines": {
+    "homebridge": ">=0.2.5"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

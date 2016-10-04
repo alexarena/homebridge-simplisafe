@@ -1,0 +1,26 @@
+{
+  "name": "homebridge-simplisafe",
+  "version": "1.0.0",
+  "description": "Control your Simplisafe Security System with Homekit",
+  "main": "index.js",
+  "dependencies": {
+    "simplisafe": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexarena/homebridge-simplisafe.git"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "author": "Alex Arena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexarena/homebridge-simplisafe/issues"
+  },
+  "homepage": "https://github.com/alexarena/homebridge-simplisafe#readme"
+}

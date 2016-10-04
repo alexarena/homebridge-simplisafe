@@ -24,8 +24,6 @@ function SimpliSafe(log, config) {
 
 SimpliSafe.prototype.isHome = function(callback) {
 
-  //console.log(ssClient.info.state);
-
   if(ssClient.info.state != 'home'){
     this.log("alarm IS NOT set to home");
     callback(null, false);
@@ -35,28 +33,6 @@ SimpliSafe.prototype.isHome = function(callback) {
     callback(null, true);
   }
 
-/*
-  simplisafe({ user: this.username, password: this.password }, function (err, client) {
-  if(err){
-    console.log(err);
-    callback(null, false);
-  }
-  else{
-
-    if(client.info.state != 'home'){
-      console.log("alarm IS NOT set to home");
-      callback(null, false);
-    }
-    else{
-      console.log("alarm IS set to home");
-      callback(null, true);
-    }
-
-  }
-
-  client.logout(function (er) {}) // Log out, clean out the connection
-
-}) */
 }
 
 SimpliSafe.prototype.setHome = function(powerOn, callback) {
@@ -72,21 +48,6 @@ SimpliSafe.prototype.setHome = function(powerOn, callback) {
     })
   }
 
-
-  /*
-  simplisafe({ user: this.username, password: this.password}, function (err, client) {
-    if (err){
-      console.log(err);
-    }
-
-    if(client.info.state != 'home'){
-      client.setState('home', function (err) {
-          callback(null);
-      })
-    }
-
-    client.logout(function (er) {}) // Log out, clean out the connection
-  }) */
 }
 
 SimpliSafe.prototype.isAway = function(callback) {
@@ -100,29 +61,6 @@ SimpliSafe.prototype.isAway = function(callback) {
     callback(null, true);
   }
 
-  /*
-
-  simplisafe({ user: this.username, password: this.password }, function (err, client) {
-  if(err){
-    console.log(err);
-    callback(null, false);
-  }
-  else{
-
-    if(client.info.state != 'away'){
-      console.log("alarm IS NOT set to away");
-      callback(null, false);
-    }
-    else{
-      console.log("alarm IS set to away");
-      callback(null, true);
-    }
-
-  }
-
-  client.logout(function (er) {}) // Log out, clean out the connection
-
-}) */
 }
 
 SimpliSafe.prototype.setAway = function(powerOn, callback) {
@@ -138,20 +76,6 @@ SimpliSafe.prototype.setAway = function(powerOn, callback) {
     })
   }
 
-  /*
-  simplisafe({ user: this.username, password: this.password}, function (err, client) {
-    if (err){
-      console.log(err);
-    }
-
-    if(client.info.state != 'away'){
-      client.setState('away', function (err) {
-          callback(null);
-      })
-    }
-
-    client.logout(function (er) {}) // Log out, clean out the connection
-  }) */
 }
 
 SimpliSafe.prototype.getServices = function() {

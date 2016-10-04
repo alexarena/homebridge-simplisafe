@@ -12,6 +12,10 @@ homebridge-simplisafe is a plugin for [Homebridge](https://github.com/nfarina/ho
 
 Refer to `config-sample.json` for an example configuration file. Basically, the only thing you'll need to change is your SimpliSafe username and password. You'll need a Simplisafe plan that supports remote control from their iOS app, as this taps into the same API.
 
+## Usage
+
+Once installed, you should now have two SimpliSafe switches in your Home app. One turns the system on in 'Away' mode and the other does the same for 'Home' mode. 
+
 ## Thanks
 
 Many thanks to [@greencoder](https://github.com/greencoder) for [reverse-engineering the SimpliSafe API](http://www.leftovercode.info/simplisafe.php), [@searls](https://github.com/searls/) for using that to create the [SimpliSafe Node wrapper](https://github.com/searls/simplisafe) and, of course, to [@nfarina](https://github.com/nfarina/) for creating Homebridge.

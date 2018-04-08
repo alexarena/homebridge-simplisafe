@@ -32,7 +32,7 @@ function SimpliSafe(log, config) {
 SimpliSafe.prototype.isHome = function(callback) {
 	var thisObj = this
 	ss3Client.getAlarmState().then(function(alarmState) {
-		if (alarmState === 'HOME') {
+		if (alarmState.startsWith('HOME')) {
 			thisObj.log("alarm IS set to home");
 			callback(null, true)
 		} else {
@@ -44,17 +44,7 @@ SimpliSafe.prototype.isHome = function(callback) {
 
 SimpliSafe.prototype.setHome = function(powerOn, callback) {
 	this.log('setHome powerOn: ' + powerOn)
-
-	var thisObj = this
-	ss3Client.getAlarmState().then(function(alarmState) {
-		if (alarmState === 'HOME') {
-			thisObj.log("alarm IS set to home, setting to off");
-			return ss3Client.setState('off')
-		} else {
-			thisObj.log("alarm IS NOT set to home: " + alarmState + ', setting to home');
-			return ss3Client.setState('home')
-		}
-	})
+	ss3Client.setState(powerOn ? 'home' :'off')
 		.then(function() {
 			callback(null)
 		})
@@ -63,7 +53,7 @@ SimpliSafe.prototype.setHome = function(powerOn, callback) {
 SimpliSafe.prototype.isAway = function(callback) {
 	var thisObj = this
 	ss3Client.getAlarmState().then(function(alarmState) {
-		if (alarmState === 'AWAY') {
+		if (alarmState.startsWith('AWAY')) {
 			thisObj.log("alarm IS set to away");
 			callback(null, true)
 		} else {
@@ -75,17 +65,7 @@ SimpliSafe.prototype.isAway = function(callback) {
 
 SimpliSafe.prototype.setAway = function(powerOn, callback) {
 	this.log('setAway powerOn: ' + powerOn)
-
-	var thisObj = this
-	ss3Client.getAlarmState().then(function(alarmState) {
-		if (alarmState === 'AWAY') {
-			thisObj.log("alarm IS set to away, setting to off");
-			return ss3Client.setState('off')
-		} else {
-			thisObj.log("alarm IS NOT set to away: " + alarmState + ', setting to away');
-			return ss3Client.setState('away')
-		}
-	})
+	ss3Client.setState(powerOn ? 'away' :'off')
 		.then(function() {
 			callback(null)
 		})

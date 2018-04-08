@@ -25,7 +25,7 @@ function SimpliSafe(log, config) {
 			return ss3Client.getAlarmState()
 		})
 		.then(function(alarmState) {
-			console.log('alarmState: ' + alarmState)
+			log('alarmState: ' + alarmState)
 		})
 }
 

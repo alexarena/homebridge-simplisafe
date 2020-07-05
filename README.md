@@ -1,3 +1,6 @@
+# NOTE
+This project is archived and no longer maintained. Please instead refer to: https://github.com/nzapponi/homebridge-simplisafe3
+
 # homebridge-simplisafe-ss3
 homebridge-simplisafe-ss3 is a plugin for [Homebridge](https://github.com/nfarina/homebridge) that allows you to control your SimpliSafe security system through Homekit by using the ss3 version of the SimpliSafe REST APIs. 
 

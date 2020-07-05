@@ -1,10 +1,13 @@
 {
-  "name": "homebridge-simplisafe",
+  "name": "homebridge-simplisafe-ss3",
   "version": "1.0.0",
-  "description": "Control your Simplisafe Security System with Homekit",
+  "description": "Control your Simplisafe Security System with Homekit using the ss3 SimpliSafe REST APIs",
   "main": "index.js",
   "dependencies": {
-    "simplisafe": "^1.0.0"
+    "lodash": "^4.13.1",
+    "request": "^2.72.0",
+    "request-promise-any": "^1.0.5",
+    "q": "^1.5.1"
   },
   "engines": {
     "homebridge": ">=0.2.5"
@@ -15,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexarena/homebridge-simplisafe.git"
+    "url": "git+https://github.com/chowielin/homebridge-simplisafe.git"
   },
   "keywords": [
     "homebridge-plugin"
   ],
-  "author": "Alex Arena",
+  "author": "Chowie Lin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexarena/homebridge-simplisafe/issues"
+    "url": "https://github.com/chowielin/homebridge-simplisafe/issues"
   },
-  "homepage": "https://github.com/alexarena/homebridge-simplisafe#readme"
+  "homepage": "https://github.com/chowielin/homebridge-simplisafe#readme"
 }
